@@ -31,6 +31,7 @@ def firstDraftWithTypo(drafts: List[int]) -> int:
     # use a binary search similar to the rotation point problem 
     left = 0
     right = len(drafts) - 1
+    containsTypo = False
 
     while left < right:
         mid = ((right - left) // 2) + left 
@@ -48,3 +49,5 @@ def firstDraftWithTypo(drafts: List[int]) -> int:
 
         if left + 1 == right:
             return right 
+
+print(firstDraftWithTypo([1, 2, 3, 4, 5, 6]))
